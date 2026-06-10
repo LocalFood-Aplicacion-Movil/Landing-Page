@@ -64,11 +64,11 @@ document.addEventListener("DOMContentLoaded", () => {
       'hero.title': 'Ubicación de Restaurantes por Grupo de Personas',
       'hero.subtitle': 'Iníciate ahora <br><strong>Let’s Go!!!</strong>',
       'about.title': 'Acerca de Nosotros',
-      'about.text': 'En una ciudad como Lima, donde el tráfico es uno de los principales problemas diarios, LocalFood surge para facilitar encuentros sociales y profesionales. Utilizamos geolocalización inteligente para encontrar el restaurante óptimo donde reunirse, reduciendo tiempos de traslado y mejorando la experiencia de los usuarios.',
+      'about.text': 'En una ciudad como Lima, donde el tráfico es uno de los principales problemas diarios, NearbyEats surge para facilitar encuentros sociales y profesionales. Utilizamos geolocalización inteligente para encontrar el restaurante óptimo donde reunirse, reduciendo tiempos de traslado y mejorando la experiencia de los usuarios.',
       'brands.title': 'Marcas Registradas',
       'countries.title': 'Países Hábiles',
-      'countries.text': 'Actualmente LocalFood está disponible en <strong>Perú</strong>, con miras a expandirse a toda Latinoamérica en los próximos años.',
-      'footer.copy': '© 2025 LocalFood. Todos los derechos reservados.'
+      'countries.text': 'Actualmente NearbyEats está disponible en <strong>Perú</strong>, con miras a expandirse a toda Latinoamérica en los próximos años.',
+      'footer.copy': '© 2025 NearbyEats. Todos los derechos reservados.'
     },
     en: {
       'nav.home': 'Home',
@@ -80,11 +80,11 @@ document.addEventListener("DOMContentLoaded", () => {
       'hero.title': 'Restaurant location by group of people',
       'hero.subtitle': 'Get started now <br><strong>Let’s Go!!!</strong>',
       'about.title': 'About Us',
-      'about.text': 'In a city like Lima, where traffic is one of the main daily problems, LocalFood helps to facilitate social and professional meetings. We use smart geolocation to find the optimal restaurant to meet, reducing travel times and improving the user experience.',
+      'about.text': 'In a city like Lima, where traffic is one of the main daily problems, NearbyEats helps to facilitate social and professional meetings. We use smart geolocation to find the optimal restaurant to meet, reducing travel times and improving the user experience.',
       'brands.title': 'Registered Brands',
       'countries.title': 'Available Countries',
-      'countries.text': 'LocalFood is currently available in <strong>Peru</strong>, with plans to expand throughout Latin America in the coming years.',
-      'footer.copy': '© 2025 LocalFood. All rights reserved.'
+      'countries.text': 'NearbyEats is currently available in <strong>Peru</strong>, with plans to expand throughout Latin America in the coming years.',
+      'footer.copy': '© 2025 NearbyEats. All rights reserved.'
     }
   };
 
