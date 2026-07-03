@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LocalFood - Landing Page</title>
+  <title>NearbyEats - Landing Page</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
   <!-- ===== NAVBAR ===== -->
   <header class="navbar">
     <div class="nav-inner">
       <div class="brand">
-        <a href="#inicio"><img src="Landing-Page/Assets/logo.png" alt="LocalFood Logo" style="max-width:48px;"></a>
+        <!-- Puedes usar tu logo o texto -->
+        <a href="#inicio" class="brand-link">
+        <img src="Landing-Page/Assets/logo.png" alt="Logo NearbyEats" class="brand2-logo">
+        NearbyEats
+        </a>
       </div>
       <nav class="desktop-nav">
         <ul>
@@ -23,6 +28,7 @@
       </nav>
 
       <div class="nav-actions">
+        <!-- ESTE BOTÓN MANTIENE SU ESTILO ORIGINAL -->
         <button id="lang-toggle" class="lang-btn" aria-label="Cambiar idioma">ES</button>
         <button id="hamburger-btn" class="hamburger" aria-label="Abrir menú">
           <span></span>
@@ -31,100 +37,86 @@
         </button>
       </div>
     </div>
-
-    <!-- Menú móvil full-screen -->
-    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
-      <button id="mobile-close" class="mobile-close" aria-label="Cerrar menú">×</button>
-      <ul>
-        <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
-        <li><a href="#nosotros" data-i18n="nav.about">Acerca de Nosotros</a></li>
-        <li><a href="#marcas" data-i18n="nav.brands">Marcas Registradas</a></li>
-        <li><a href="#paises" data-i18n="nav.countries">Países Hábiles</a></li>
-      </ul>
-    </div>
   </header>
 
-  <!-- ===== HERO ===== -->
- <!-- ===== HERO ===== -->
-<section id="inicio" class="hero">
-  <div class="hero-text">
-    <h1 data-i18n="hero.title">Ubicación de Restaurantes por Grupo de Personas</h1>
-    <p data-i18n="hero.subtitle">Iníciate ahora <br><strong>Let’s Go!!!</strong></p>
-    <div class="buttons">
-      <a href="./docs/NearbyEats%20.apk" class= "btn" data-i18n="action.login">Descargar aquí</a>
+  <!-- ===== Menú Móvil ===== -->
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <button id="mobile-close" class="mobile-close" aria-label="Cerrar menú">×</button>
+    <ul>
+      <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
+      <li><a href="#nosotros" data-i18n="nav.about">Acerca de Nosotros</a></li>
+      <li><a href="#marcas" data-i18n="nav.brands">Marcas Registradas</a></li>
+      <li><a href="#paises" data-i18n="nav.countries">Países Hábiles</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== HERO (Estilo Netflix) ===== -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1 data-i18n="hero.title">Ubicación de Restaurantes por Grupo de Personas</h1>
+      <p data-i18n="hero.subtitle">Iníciate ahora <br><strong>Let’s Go!!!</strong></p>
+      <div class="cta-form">
+        <a href="./docs/NearbyEats%20.apk" class="btn-cta" data-i18n="action.login">Descargar aquí ></a>
+      </div>
     </div>
-    <!-- Logo pequeño debajo del texto -->
-    <div class="logo">
-      <img src="Landing-Page/Assets/logo.png" alt="LocalFood Logo" style="max-width:100px;">
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ===== SOBRE NOSOTROS (Texto Izq, Imagen Der) ===== -->
+  <section id="nosotros" class="section-container">
+    <div class="section-text">
+      <h2 data-i18n="about.title">Acerca de Nosotros</h2>
+      <p data-i18n="about.text">En una ciudad como Lima, donde el tráfico es uno de los principales problemas diarios, NearbyEats surge para facilitar encuentros sociales y profesionales. Utilizamos geolocalización inteligente para encontrar el restaurante óptimo donde reunirse, reduciendo tiempos de traslado y mejorando la experiencia de los usuarios.</p>
     </div>
-  </div>
-
-  <!-- Imagen decorativa del héroe -->
-  <div class="hero-img">
-    <img src="Landing-Page/Assets/restaurante.jpg" alt="Personas en un restaurante">
-  </div>
-</section>
-
-
-
-  <!-- ===== SOBRE NOSOTROS ===== -->
-<section id="nosotros" class="info-section about">
-  <div class="content">
-    <h2 data-i18n="about.title">Acerca de Nosotros</h2>
-    <p data-i18n="about.text">
-      En una ciudad como Lima, donde el tráfico es uno de los principales problemas diarios,
-      NearbyEats surge para facilitar encuentros sociales y profesionales. Utilizamos
-      geolocalización inteligente para encontrar el restaurante óptimo donde reunirse,
-      reduciendo tiempos de traslado y mejorando la experiencia de los usuarios.
-    </p>
-    <!-- Imagen decorativa -->
-    <img src="Landing-Page/Assets/about.jpg" alt="Encuentro de amigos" style="max-width:300px; margin-top:20px; border-radius:12px;">
-  </div>
-</section>
-
-
- 
-  <!-- ===== MARCAS REGISTRADAS ===== -->
-<section id="marcas" class="info-section brands">
-  <div class="content">
-    <h2 data-i18n="brands.title">Marcas Registradas</h2>
-        <div class="brand-logos">
-          <img src="Landing-Page/Assets/kfc.png" alt="KFC">
-          <img src="Landing-Page/Assets/Bembos.PNG" alt="Bembos">
-          <img src="Landing-Page/Assets/starbucks.png" alt="Starbucks">
-          <img src="Landing-Page/Assets/pizza-hut.png" alt="Pizza Hut">
-        </div>
-    <p style="margin-top:20px; font-size:14px; color:#777;">
-      Aliados estratégicos que garantizan calidad y confianza en cada experiencia.
-    </p>
-  </div>
-</section>
-
- <!-- ===== PAÍSES HÁBILES ===== -->
-<section id="paises" class="info-section countries">
-  <div class="content">
-    <h2 data-i18n="countries.title">Países Hábiles</h2>
-    <p data-i18n="countries.text">
-      Actualmente NearbyEats está disponible en <strong>Perú</strong>, con miras a expandirse
-      a toda Latinoamérica en los próximos años.
-    </p>
-    <div class="country-flags">
-      <img src="Landing-Page/Assets/peru.png" alt="Perú">
+    <div class="section-image">
+      <img src="Landing-Page/Assets/about.jpg" alt="Encuentro de amigos" style="border-radius: 8px;">
     </div>
-  </div>
-</section>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ===== MARCAS REGISTRADAS (Imagen Izq, Texto Der - Reverse) ===== -->
+  <section id="marcas" class="section-container reverse">
+    <div class="section-text">
+      <h2 data-i18n="brands.title">Marcas Registradas</h2>
+      <p style="margin-top:20px; font-size:1.5rem; color:#ccc;">Aliados estratégicos que garantizan calidad y confianza en cada experiencia.</p>
+    </div>
+    <div class="section-image brand-logos-container">
+      <img src="/Landing-Page/Assets/kfc.png" alt="KFC">
+      <img src="/Landing-Page/Assets/Bembos.PNG" alt="Bembos">
+      <img src="/Landing-Page/Assets/starbucks.png" alt="Starbucks">
+      <img src="/Landing-Page/Assets/pizza-hut.png" alt="Pizza Hut">
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ===== PAÍSES HÁBILES (Texto Izq, Imagen Der) ===== -->
+  <section id="paises" class="section-container">
+    <div class="section-text">
+      <h2 data-i18n="countries.title">Países Hábiles</h2>
+      <p data-i18n="countries.text">Actualmente NearbyEats está disponible en <strong>Perú</strong>, con miras a expandirse a toda Latinoamérica en los próximos años.</p>
+    </div>
+    <div class="section-image">
+      <img src="Landing-Page/Assets/peru.png" alt="Perú" style="max-width: 200px;">
+    </div>
+  </section>
+
+  <div class="divider"></div>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer-content">
       <p data-i18n="footer.copy">&copy; 2025 NearbyEats. Todos los derechos reservados.</p>
       <div class="socials">
-        <a href="#"><img src="Landing-Page/Assets/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="Landing-Page/Assets/face.png" alt="Facebook"></a>
         <a href="#"><img src="Landing-Page/Assets/twitter.png" alt="Twitter"></a>
         <a href="#"><img src="Landing-Page/Assets/instagram.png" alt="Instagram"></a>
-      </div>
+</div>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

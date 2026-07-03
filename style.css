@@ -1,399 +1,374 @@
 /* ==============================
-   RESET
+   RESET & GENERAL (NETFLIX STYLE)
 ============================== */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:#f8f9fb;
-    color:#333;
-    line-height:1.6;
+body {
+    background-color: #000000; /* Fondo oscuro estilo Netflix */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Líneas divisorias grises */
+.divider {
+    height: 8px;
+    background-color: #222;
 }
 
 /* ==============================
-   NAVBAR
+   NAVBAR (Fondo oscuro)
 ============================== */
-
-.navbar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-
-    background:rgba(255,255,255,.85);
-    backdrop-filter:blur(12px);
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.85); /* Negro translúcido */
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #333;
 }
 
-.nav-inner{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 35px;
+.nav-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 35px;
 }
 
-.brand img{
-    width:55px;
+.desktop-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
 }
 
-.desktop-nav ul{
-    list-style:none;
-    display:flex;
-    gap:35px;
+.desktop-nav a {
+    text-decoration: none;
+    color: #e5e5e5;
+    font-weight: 500;
+    transition: .3s;
+    font-size: 1rem;
 }
 
-.desktop-nav a{
-    text-decoration:none;
-    color:#444;
-    font-weight:600;
-    transition:.3s;
+.desktop-nav a:hover {
+    color: #ff6b00;
 }
 
-.desktop-nav a:hover{
-    color:#ff6b00;
+.nav-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
 }
 
-.nav-actions{
-    display:flex;
-    gap:12px;
+/* === BOTÓN DE CAMBIAR IDIOMA INTACTO === */
+.lang-btn {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #ff6b00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
 }
 
-.lang-btn{
-    width:42px;
-    height:42px;
-    border:none;
-    border-radius:50%;
-    background:#ff6b00;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
+.lang-btn:hover {
+    transform: scale(1.08);
 }
 
-.lang-btn:hover{
-    transform:scale(1.08);
+/* ============================== */
+
+.hamburger {
+    display: none;
+    width: 35px;
+    height: 25px;
+    border: none;
+    background: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
 }
 
-.hamburger{
-    display:none;
-    width:42px;
-    height:38px;
-    border:none;
-    background:none;
-    flex-direction:column;
-    justify-content:space-between;
-    cursor:pointer;
-}
-
-.hamburger span{
-    height:4px;
-    background:#444;
-    border-radius:20px;
+.hamburger span {
+    height: 3px;
+    background: #ffffff; /* Hamburguesa blanca */
+    border-radius: 20px;
 }
 
 /* ==============================
-   MOBILE MENU
+   MOBILE MENU (Oscuro)
 ============================== */
-
-.mobile-menu{
-    position:fixed;
-    inset:0;
-    background:white;
-    display:none;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: #111; /* Fondo negro puro */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
 }
 
-.mobile-menu.active{
-    display:flex;
+.mobile-menu.active {
+    display: flex;
 }
 
-.mobile-menu ul{
-    list-style:none;
+.mobile-menu ul {
+    list-style: none;
+    text-align: center;
 }
 
-.mobile-menu li{
-    margin:25px 0;
+.mobile-menu li {
+    margin: 25px 0;
 }
 
-.mobile-menu a{
-    text-decoration:none;
-    font-size:28px;
-    color:#333;
-    font-weight:600;
+.mobile-menu a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 600;
 }
 
-.mobile-close{
-    position:absolute;
-    top:30px;
-    right:30px;
-    font-size:40px;
-    background:none;
-    border:none;
-    cursor:pointer;
+.mobile-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
 }
 
 /* ==============================
-   HERO
+   HERO (NETFLIX STYLE)
 ============================== */
-
-.hero{
-
-    min-height:100vh;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:120px 10% 80px;
-
-    background:linear-gradient(135deg,#FFF6E9,#FFE4BF);
-
-    gap:60px;
+.hero {
+    /* Fondo oscuro sobre la imagen del restaurante */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.9) 100%), url('Landing-Page/Assets/restaurante.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
 }
 
-.hero-text{
-    flex:1;
+.hero-content h1 {
+    font-size: 4rem;
+    max-width: 800px;
+    margin: 0 auto 15px auto;
 }
 
-.hero-text h1{
-
-    font-size:3.7rem;
-    line-height:1.15;
-    margin-bottom:20px;
-    color:#222;
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
 }
 
-.hero-text p{
-
-    font-size:1.2rem;
-    color:#666;
-    margin-bottom:30px;
+.cta-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
 }
 
-.buttons{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+.btn-cta {
+    background-color: #ff6600;
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.btn{
-
-    display:inline-block;
-
-    padding:16px 38px;
-
-    background:#ff6b00;
-
-    color:white;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-    font-weight:700;
-
-    transition:.35s;
-
-    box-shadow:0 12px 30px rgba(255,107,0,.3);
-}
-
-.btn:hover{
-
-    transform:translateY(-5px);
-
-    background:#ff8124;
-}
-
-.hero-img{
-
-    flex:1;
-
-    display:flex;
-
-    justify-content:center;
-}
-
-.hero-img img{
-
-    width:100%;
-    max-width:520px;
-
-    border-radius:25px;
-
-    box-shadow:0 25px 50px rgba(0,0,0,.15);
-}
-
-.logo{
-    margin-top:40px;
+.btn-cta:hover {
+    background-color: #e65c00;
 }
 
 /* ==============================
-   SECCIONES
+   SECCIONES DIVIDIDAS (NETFLIX SPLIT)
 ============================== */
-
-.info-section{
-
-    padding:90px 8%;
+.section-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 45px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.content{
-
-    max-width:1100px;
-
-    margin:auto;
-
-    background:white;
-
-    border-radius:25px;
-
-    padding:60px;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-
-    transition:.4s;
+.reverse {
+    flex-direction: row-reverse;
 }
 
-.content:hover{
-
-    transform:translateY(-8px);
+.section-text {
+    flex: 1;
+    padding-right: 3rem;
 }
 
-.content h2{
-
-    font-size:2.5rem;
-
-    margin-bottom:25px;
-
-    color:#222;
+.reverse .section-text {
+    padding-right: 0;
+    padding-left: 3rem;
 }
 
-.content p{
-
-    color:#666;
-
-    font-size:18px;
-
-    max-width:850px;
-
-    margin:auto;
+.section-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-/* ==============================
-   LOGOS
-============================== */
-
-.brand-logos{
-
-    margin-top:40px;
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:50px;
-
-    flex-wrap:wrap;
+.section-text p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #e5e5e5;
 }
 
-.brand-logos img{
-
-    width:120px;
-
-    filter:grayscale(100%);
-
-    transition:.4s;
+.section-image {
+    flex: 1;
+    text-align: center;
 }
 
-.brand-logos img:hover{
-
-    filter:none;
-
-    transform:scale(1.15) rotate(-3deg);
+.section-image img {
+    max-width: 100%;
+    height: auto;
 }
 
-/* ==============================
-   BANDERAS
-============================== */
-
-.country-flags{
-
-    margin-top:35px;
-
-    display:flex;
-
-    justify-content:center;
+/* Logos de Marcas Adaptados al Modo Oscuro */
+.brand-logos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
-.country-flags img{
-
-    width:150px;
-
-    transition:.3s;
+.brand-logos-container img {
+    width: 100px;
+    /* Esto los vuelve blancos */
+    transition: 0.3s;
 }
 
-.country-flags img:hover{
-
-    transform:scale(1.08);
+.brand-logos-container img:hover {
+    transform: scale(1.1);
+}
+/* Controla el enlace completo (alineación y texto) */
+.brand-link {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    color: #ff6600; 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    text-decoration: none;
 }
 
+/* Controla únicamente el tamaño del logo */
+.brand2-logo {
+    width: 60px; 
+    height: auto; 
+    border-radius: 50%; 
+}
 /* ==============================
    FOOTER
 ============================== */
-
-.footer{
-
-    background:#222;
-
-    color:white;
-
-    padding:50px 20px;
+.footer {
+    background: #000;
+    color: #737373;
+    padding: 50px 45px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.footer-content{
-
-    max-width:1200px;
-
-    margin:auto;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    flex-wrap:wrap;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #333;
+    padding-top: 30px;
 }
 
-.socials{
-
-    display:flex;
-
-    gap:20px;
+.socials {
+    display: flex;
+    gap: 30px; 
 }
 
-.socials img{
-
-    width:34px;
-
-    transition:.3s;
-
-    filter:brightness(0) invert(1);
+.socials img {
+    width: 50px; 
+    transition: .3s;
 }
 
-.socials img:hover{
+.socials img:hover {
+    transform: translateY(-6px);
+}
+/* ==============================
+   RESPONSIVE (MÓVILES)
+============================== */
+@media (max-width: 950px) {
+    .desktop-nav {
+        display: none;
+    }
 
-    transform:translateY(-6px);
+    .hamburger {
+        display: flex;
+    }
+
+    .section-container, .section-container.reverse {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .section-text, .reverse .section-text {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .hero-content h1 { 
+        font-size: 2.5rem; 
+        margin-top: 60px; /* Evita que el menú lo tape */
+    }
+    
+    .section-text h2 {
+        font-size: 2rem;
+    }
+
+    .section-text p {
+        font-size: 1.2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+.socials {
+    display: flex;
+    gap: 30px; /* Aumenté un poco el espacio aquí para que no se amontonen al crecer */
+}
+
+.socials img {
+    width: 50px; /* ¡AQUÍ ESTÁ LA MAGIA! Cambia este número para hacerlos más grandes o más chicos */
+    transition: .3s;
+}
+
+.socials img:hover {
+    transform: translateY(-6px);
 }
 
 /* ==============================
@@ -509,6 +484,24 @@ body{
     .brand-logos img{
 
         width:90px;
+    }
+
+    /* Controla el enlace completo (alineación y texto) */
+    .brand-link {
+        display: flex;
+        align-items: center; 
+        gap: 10px; 
+        color: #ff6600; 
+        font-size: 1.5rem; 
+        font-weight: bold; 
+        text-decoration: none;
+    }
+
+    /* Controla únicamente el tamaño del logo */
+   .brand2-logo {
+    width: 60px; 
+    height: auto; 
+    border-radius: 50%; 
     }
 
     .country-flags img{
